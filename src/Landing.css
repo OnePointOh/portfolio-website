@@ -1,0 +1,70 @@
+.Landing {
+  font-size: calc(20px + 5vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: calc(20px + 4vmin);
+  font-weight: bold;
+  background: linear-gradient(0deg, #4f63ea, #ab5deb);
+  padding-top: 2vh;
+  padding-bottom: 2vh; /* Add padding-bottom to create a vertical center */
+  width: 100%;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2vh;
+  width: 80%; /* Adjust width as necessary */
+}
+
+.column {
+  padding: 1em;
+}
+
+.image-column {
+  flex: 1; /* Adjust the flex value to give less space to the image column */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  max-width: 300px; /* Adjust max-width as needed */
+  height: auto;
+  border-radius: 50%; /* Optional, for a circular image */
+}
+
+.about-column {
+  flex: 2; /* Adjust the flex value to give more space to the text column */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-me {
+  text-align: left;
+  font-size: 1rem; /* Adjust base font size as necessary */
+}
+
+.about-me h2 {
+  font-size: 3rem; /* Adjust header font size */
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.about-me p {
+  font-size: 1.2rem; /* Adjust paragraph font size */
+  margin: 0;
+}
+
+.text-under {
+  margin-top: 1em; /* Adjust as needed for spacing */
+  color: black; /* Adjust color if necessary */
+}
