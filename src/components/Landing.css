@@ -1,3 +1,16 @@
+
+h2 {
+  font-size: 3rem; /* Adjust header font size */
+  margin: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem; /* Adjust paragraph font size */
+  margin: 0;
+}
+
 .Landing {
   font-size: calc(20px + 5vmin);
   display: flex;
@@ -6,11 +19,11 @@
 }
 
 .title {
-  font-size: calc(20px + 4vmin);
+  font-size: calc(20px + 2vmin);
   font-weight: bold;
   background: linear-gradient(0deg, #4f63ea, #ab5deb);
-  padding-top: 2vh;
-  padding-bottom: 2vh; /* Add padding-bottom to create a vertical center */
+  padding-top: 1vh;
+  padding-bottom: 1vh; /* Add padding-bottom to create a vertical center */
   width: 100%;
   text-align: center;
 }
@@ -53,18 +66,24 @@
   font-size: 1rem; /* Adjust base font size as necessary */
 }
 
-.about-me h2 {
-  font-size: 3rem; /* Adjust header font size */
-  margin: 0;
-  margin-bottom: 0.5em;
+.about-me h2{
+  text-align: left;
 }
 
-.about-me p {
-  font-size: 1.2rem; /* Adjust paragraph font size */
-  margin: 0;
+.about-website {
+  text-align: left;
+  font-size: 1rem; /* Adjust base font size as necessary */
+  margin-top: 2vh;
+  width: 80%; /* Adjust width as necessary */
 }
 
 .text-under {
   margin-top: 1em; /* Adjust as needed for spacing */
   color: black; /* Adjust color if necessary */
+}
+
+.matches_col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
