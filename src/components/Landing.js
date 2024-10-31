@@ -13,6 +13,7 @@ import DataGrid, { SelectColumn, textEditor } from 'react-data-grid';
 import Tooltip from '@mui/material/Tooltip';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ProjectPage from './ProjectPage';
 
 
 const Title = () => {
@@ -79,7 +80,7 @@ const TagSearch = ({setSelected}) => {
         all_tags['Technical Skills'] = ['Data Science', 'Machine Learning', 'AI', 'Frontend', 'Backend', 'Web Development', 'Fullstack', 'API'];
         all_tags['Social Skills'] = ['Leadership', 'Teamwork', 'Scrum', 'Communication'];
         all_tags['Languages'] = ['Python', 'C++', 'Javascript', 'HTML', 'CSS', 'SQL', 'PostgreSQL', 'Ruby', 'Ruby on Rails'];
-        all_tags['Frameworks'] = ['Pytorch', 'CARLA', 'Microsoft Power BI', 'React'];
+        all_tags['Frameworks'] = ['Pytorch', 'CARLA', 'Microsoft Power BI', 'React', "AWS"];
         all_tags['Other'] = [];
     }
     console.log(all_tags)
@@ -158,9 +159,11 @@ const ProjectGrid = ({selected, projects}) => {
 
           project_matches = project_matches.sort((a, b) => b['matches'] - a['matches']);
         
+          /*
           if (project_matches.length != 0){
             console.log(project_matches[project_matches.length - 1]['matchedTags'])
           }
+            */
           
           setMatched(project_matches);
 
@@ -204,9 +207,27 @@ const MatchLabel = ({ row }) => {
 
 
 const ProjectLabel = ({row}) => {
-    var link = "/project/" + row.title;
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => {
+        console.log('close');
+        setShow(false);
+    };
+    const handleShow = () => {
+        console.log('open');
+        setShow(true);
+    };
+    
     return(
-        <a href={link}>{row.display_title}</a>
+        <div>
+            <Button variant="outlined" onClick={handleShow} sx={{textTransform: 'capitalize'}}>
+                {row.display_title}
+            </Button>
+
+
+            
+            <ProjectPage title = {row.title} open = {show} handleClose = {handleClose}/>
+        </div>
     );
 }
 

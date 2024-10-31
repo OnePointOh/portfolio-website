@@ -8,16 +8,11 @@ import { TagsProvider } from './TagContext';
 
 const App = () => {
   return (
-    <Router>
-      <ProjectProvider>
-        <TagsProvider>
-          <Routes>
-            <Route path="/" exact element={<Landing/>}/>
-            <Route path="/project/:title" element={<ProjectPage/>} />
-          </Routes>
-        </TagsProvider>
-      </ProjectProvider>
-    </Router>
+    <ProjectProvider>
+      <TagsProvider>
+        <Landing/>
+      </TagsProvider>
+    </ProjectProvider>
   );
 };
 

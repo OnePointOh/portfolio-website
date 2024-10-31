@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -16,10 +17,12 @@
     "axios": "^1.7.2",
     "json-loader": "^0.5.7",
     "react": "^17.0.0 || ^18.0.0",
+    "react-bootstrap-modal": "^4.2.0",
     "react-data-grid": "^7.0.0-beta.44",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
+    "spa-http-server": "^0.9.0",
     "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
