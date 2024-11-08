@@ -1,0 +1,8 @@
+{
+    "title": "attendance_tracker",
+    "display_title": "Attendance Tracker",
+    "description": "This was a group project done for CSCE 431. We created an attendance tracker for the local University club BYX. Our clients needed a program that could interact with a database so that they could convert their attendance records, record attendance to upcoming events, and easily scan through the data for attendance statistics on their members. We used Ruby on Rails.",
+    "tags": ["Frontend", "Backend", "Fullstack", "Teamwork"],
+    "github": "https://github.com/carlosbarker/csce431_fall22_BYX-Point-Service"
+}
+  

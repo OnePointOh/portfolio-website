@@ -1,0 +1,8 @@
+{
+    "title": "portfolio_website",
+    "display_title": "Portfolio Website",
+    "description": "This website! I created this website to help highlight my experience in various tools and frameworks. To build this website, I used React. I host this website using a few AWS services including: S3, Route 53, and CloudFront. I wanted to make it easy to add or remove project pages, so each project is coded as a JSON file that gets read and formatted by the React App. This website uses stylized components from MUI.",
+    "tags": ["Frontend", "Backend", "Fullstack", "AWS", "AWS Route53", "AWS CloudFront", "AWS S3", "React", "Javascript", "CSS"],
+    "github": "https://github.com/OnePointOh/portfolio-website"
+}
+  
