@@ -1,9 +1,14 @@
+import './ProjectPage.css'
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useProjects } from '../ProjectContext';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import PropTypes from "prop-types";
+import YoutubeEmbed from "./YoutubeEmbed";
+
 
 
 const style = {
@@ -23,8 +28,10 @@ const style = {
 const ProjectPage = ({title, open, handleClose}) => {
   const projects = useProjects();
   const project = projects[title];
+  var title_text;
   var description_text;
   var tags_text;
+  var video_div;
 
   if (!project) {
     return (
@@ -47,6 +54,28 @@ const ProjectPage = ({title, open, handleClose}) => {
     );
   }
 
+  if (project.title){
+    if (project.github){
+      title_text = (
+        <>
+          <Typography id="modal-modal-title" variant="h4" component="h2" paddingBottom={2}>
+            {project.display_title}
+            <a href={project.github}>
+              <img src={require('../assets/github-mark.png')} className="github-logo" alt="Github Logo" width="42" height="42" />
+            </a>
+          </Typography>
+          
+        </>
+        )
+    }
+    else{
+      title_text = (
+      <Typography id="modal-modal-title" variant="h4" component="h2" paddingBottom={2}>
+        {project.display_title}
+      </Typography>)
+    }
+  }
+
   if (project.tags){
     tags_text = (<>
       <Typography id="modal-modal-description" variant='h5' marginX={5}>
@@ -59,7 +88,8 @@ const ProjectPage = ({title, open, handleClose}) => {
   }
 
   if (project.description){
-    description_text = (<>
+    description_text = (
+    <>
       <Typography id="modal-modal-description" variant='h5' marginX={5}>
         Description
       </Typography>
@@ -67,6 +97,17 @@ const ProjectPage = ({title, open, handleClose}) => {
         {project.description}
       </Typography>
     </>)
+  }
+
+  if (project.video){
+    video_div = (
+      <>
+      <Typography id="modal-modal-description" variant='h5' marginX={5}>
+        Demo Video
+      </Typography>
+      <YoutubeEmbed embedId= {project.video} />
+      </>
+    )
   }
 
   return (
@@ -77,13 +118,12 @@ const ProjectPage = ({title, open, handleClose}) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h4" component="h2" paddingBottom={2}>
-              {project.display_title}
-            </Typography>
+            {title_text}
             <hr></hr>
           <Box sx={{mt: 4, width: 8/10, height: 8/10, overflow: "auto", margin:"auto"}}>
             {tags_text}
             {description_text}
+            {video_div}
           </Box>
         </Box>
       </Modal>

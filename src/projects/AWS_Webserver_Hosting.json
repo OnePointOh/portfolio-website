@@ -1,0 +1,7 @@
+{
+    "title": "AWS_Webserver_Hosting",
+    "display_title": "AWS Webserver Hosting",
+    "description": "AWS Lightsail was used to host an instance of a webserver. AWS Lightsail is an example of Infrastructure as a Service (IaaS), which allows clients to setup a VM through cloud Services. In this project, an Ubuntu instance was created and configured to serve as a webserver. The Ubuntu instance was also configured to serve for a webserver for multiple different webpages.",
+    "tags": ["AWS", "Backend", "Cloud Computing", "AWS Lightsail"],
+    "video": "f29MsDUiYd0"
+}

@@ -1,0 +1,10 @@
+{
+    "title": "pseudo_lidar",
+    "display_title": "Pseudo Lidar for Autonomous Driving",
+    "description": "This was my CSCE 482 Capstone Project. We used CARLA to generate data, and created an API for modifying the driving simulations and interacting with the Data. We also trained models for generating pseudo-lidar data from the data, and trained models to classify based on the pseudo lidar data.",
+    "tags": ["AI", "Machine Learning", "CARLA", "Teamwork", "Data Science", "Comptuer Vision", "API"],
+    "github": "https://github.com/EthanVeselka/E2E_Pseudo-Lidar",
+    "video": "rvBrH2hSX1k"
+
+}
+  
